@@ -7,29 +7,38 @@ description: Filecoin frequently asked questions.
 
 [[toc]]
 
-## Getting Started
+### How do I get started with Filecoin and the broader web3 space?
 
-### How do ordinary people, not geeks, get involved in this work?
-
-You can start from checking out the tutorials from [Protoschool](https://proto.school/#/tutorials)
-Participate in the hackathon and future events of [Filecoin Ignite](https://ignite.fil.events/)
-Check out the different tools to [build dApps on Filecoin](https://blog.textile.io/)
+- You can start from checking out the tutorials from [Protoschool](https://proto.school/#/tutorials)
+- Participate in the hackathon and future events of [Filecoin Ignite](https://ignite.fil.events/)
+- Check out the different tools to [build dApps on Filecoin](https://blog.textile.io/)
 
 ### What are some of the primary use cases for Filecoin at mainnet launch?
 
-The primary use case for Filecoin at first will be more 'long term' storage applications. Archival, personal backups, etc. As well as applications like existing dApps that don't want to (or 'can't') store their data in traditional ways. There is fairly significant demand among current decentralized applications for a solution to how their data should be stored, and a good number of them already use IPFS (but resort to pinning data themselves, on their servers to ensure the data sticks around). These apps already have wallets built in usually, and adding some sort of micropayment for the data they use isn't too big of a stretch.
+Filecoin is a protocol that provides core primitives enabling a truly trustless decentralized storage network. These primitives and features include cryptographic storage proofs (that are publicly verifiable so you can trust that when a miner says they're storing your data, they actually are), cryptoeconomic mechanisms (see our recent description of Filecoin's cryptoeconomics [here](https://filecoin.io/blog/filecoin-cryptoeconomic-constructions/)), and a public blockchain. Filecoin provides these primitives to solve the really hard problem of creating a truly trustless decentralized storage network.
+
+On top of the core Filecoin protocol, there are a number of "layer 2 solutions" -- many incorporating [IPFS](https://ipfs.io/) -- that enable a broad array of use cases and applications. These solutions include Powergate, Textile Hub, and more. Using these solutions, any use case that can be built on top of IPFS can also be built on Filecoin.
+
+Some of the primary areas for development expected on Filecoin around mainnet launch are:
+
+- Additional developer tools and layer 2 solutions/libraries that strengthen Filecoin as a developer platform and ecosystem
+- IPFS apps that rely on decentralized storage solutions and want a decentralized data persistence solution as well
+- Financial tools and services on Filecoin, e.g. wallets, signing libraries, and more
+- Beginnings of verified storage solutions -- applications that use Filecoin's publicly verifiable cryptographic proofs in order to provide trustless and timestamped guarantees of storage to their users
 
 ### How can a website app be free on a network where retrieval is monetary?
 
-There are a good number of websites out there right now where file downloads are supported entirely through huge amounts of ads (the sort of thing where you click through three pages of ads before you get to your really slow download). All of those types of websites could be easily replaced with a Filecoin incentivized retrieval setup, paying small amounts of Filecoin directly for whatever files you were hoping to download (the biggest one here in my mind is when you're trying to download mods for games). There are also a bunch of large datasets out there that are hosted through amazons 'pay per download' s3 buckets, Filecoin retrieval easily competes with that too.
+Several existing websites support file downloads entirely through ads. All of those types of websites could be easily replaced with a Filecoin incentivized retrieval setup, paying small amounts of FIL (Filecoin tokens) directly for whatever files you were hoping to download (e.g. trying to download mods for games). Several large datasets are hosted through Amazon's "pay per download" S3 buckets, which Filecoin retrieval could also easily augment or replace.
 
-### How is Filecoin supposed to allure to app developers and users to actually work as a service?
+### How will Filecoin attract developers to use Filecoin for storage?
 
-It's going to require a pretty major shift in how we think about the internet. But at the same time, a very exciting shift, and things are heading that way (slowly) in general. Browser vendors and major tech companies are getting more into decentralized tech and crypto (see Brave, Opera, and Firefox's dWeb experiments)
+It's going to require a pretty major shift in how we think about the internet. But at the same time, it is a very exciting shift, and things are heading that way (slowly) in general. Browser vendors and major tech companies are getting more into decentralized tech and crypto (see Brave, Opera, and Firefox's dWeb experiments).
 
-### When shall we expect to get the detailed params of the Filecoin's Cryptoeconomic?
+We think the internet must return to its decentralized roots in order to be resilient, robust, and efficient enough for the challenges of the next several decades. Early developers in the Filecoin ecosystem are those who believe in that same vision and potential for the internet, and we're excited to work with them to build this space.
 
-We are still finalizing our cryptoeconomic parameters and they will continue to evolve. We are looking to solidify more final parameters in late July. Let us know if you have more questions on the structural mechanisms themselves.
+### When shall we expect to get the detailed params of the Filecoin's cryptoeconomics?
+
+We are still finalizing our cryptoeconomic parameters and they will continue to evolve. We will post on our blog when the parameters have been finalized.
 
 ### How expensive will Filecoin storage be at launch?
 
@@ -43,7 +52,7 @@ Further, Filecoin introduces a concept called “Verified Clients” where clien
 
 Filecoin creates a hyper-competitive market for data storage – there will be many miners offering many prices, rather than one fixed price on the network. We expect Filecoin’s permissionless model and low barriers to entry to result in some very efficient operations and low-priced storage, but it’s impossible to say what exact prices will be until the network is live.
 
-### How can I confirm the mainnet launch time is on track?
+### When will Filecoin mainnet launch?
 
 As we announced in our [roadmap update](https://filecoin.io/blog/roadmap-update-june-2020/), we’re continuing to make good progress towards mainnet launch, aiming towards the end of our mainnet launch window. However, all dates are still best-effort optimistic estimates - our top priority is to launch a secure and successful network.
 
@@ -53,11 +62,9 @@ IPFS will continue to exist as it is, enhanced with Filecoin nodes. There are ma
 
 People with unused storage who want to earn monetary rewards, should pledge that storage to Filecoin, and clients who want guaranteed storage should store that data with Filecoin miners.
 
-## Miners
-
 ### How big will the deals be that the bot tries to make with miners during Incentivized Testnet?
 
-Expect ranges from a few kilobytes up to full 32GiB sectors.
+You can expect data ranges from a few kilobytes up to full 32GiB sectors.
 
 ### Will the 5PB big miner incentive be included or excluded in the 4M incentives?
 
@@ -65,23 +72,23 @@ The mechanisms for the incentive competition are [here](https://filecoin.io/blog
 
 ### Lotus or Go-Filecoin, which is better for miners?
 
-Lotus is our reference implementation, and getting more developer attention right now.
+Lotus is the primary reference implementation for the Filecoin protocol. At this stage, we would recommend most miners use lotus to participate in the Filecoin network.
 
 ### What is your recommendation on the right hardware to use?
 
-While the Filecoin team does not recommend any specific hardware configuration, [we did share some setups](https://filecoin.io/blog/announcing-testnet-incentives/#hardware) we’ve used for various types of testing. However, it is overwhelmingly likely that there are more efficient setups, and we strongly encourage miners to test and experiment to find the best combinations.
+While the Filecoin team does not recommend any specific hardware configuration, [we did share some setups](https://filecoin.io/blog/announcing-testnet-incentives/#hardware) setups we’ve used for various types of testing. We also recently published [this guide to storage mining](https://filecoin.io/blog/filecoin-guide-to-storage-mining/) that we recommend miners read through before deciding to storage mine. However, it is overwhelmingly likely that there are more efficient setups, and we strongly encourage miners to test and experiment to find the best combinations.
 
 ### We are worried about the ability for our network to handle the additional overhead of running a Filecoin node and still provide fast services for our customers. What are the computational demands of a Lotus node? Are there any metrics for node performance given various requirements?
 
-As we approach launch, our Testground team is prioritizing getting metrics to understand the performance of Lotus nodes; we will share these as they are determined. We are also still tweaking node and network design parameters, so these numbers will continue to improve - they will likely be orders of magnitude better by launch.
+As we approach launch, our Testground team is prioritizing getting metrics to understand the performance of Lotus nodes; we will share these as they are determined. We are also still tweaking node and network design parameters, so these numbers will continue to improve significantly over the next few months.
 
-### We bought a lot of hard drives of data through the Discovery project. When will they be shipped to China?
+### We bought a lot of hard drives of data through the Discover project. When will they be shipped to China?
 
 There are a number of details that are still being finalized between the verified deals construction and the associated cryptoeconomic parameters.
 
-Our aim is to allow these details to finalize before shipping, but given timelines, we’re considering enabling teams to take receipt of these drives before the parameters are set.
+Our aim is to allow these details to finalize before shipping, but given timelines, we’re considering enabling teams to take receipt of these drives before the parameters are set. We will publish updates on the status of the Discover project on the Filecoin blog.
 
-### Is there a miner’s KYC certification process, if so how does that work? How will you verify the mining location of miners?
+### Is there a KYC certification process for miners? How does it work? How will you verify the geographical location of miners?
 
 To receive tokens, miners will be required to verify their identity by providing passports or similar identity documents. We may need to request additional information in rare cases.
 
@@ -94,22 +101,6 @@ Location verification is not required to participate in either (i) the global le
 We consider the location of the storage and sealing hardware to be the location of the miner.
 
 Please note that miners who attempt to “spoof” their location will be completely ineligible for all rewards.
-
-### How will Filecoin identify the mining location of miners?
-
-When we verify miners’ locations, we’ll reach out by email and coordinate a time that the miner will be standing by to provide verification. We’ll ask for some specific evidence and require submission within a short time period.
-
-Location verification is not required to participate in either (i) the global leaderboard or (ii) the regional leaderboard for the most competitive region (i.e., the region with the most storage).
-
-We consider the location of the storage and sealing hardware to be the location of the miner.
-
-Please note that miners who attempt to “spoof” their location will be completely ineligible for all rewards.
-
-### Would the repair miner have a "budget" that it can spend on delegating new storage miners when previous ones fail? Or are tokens "refunded" when the original storage miner fails, and the repair miner just reallocates it as the budget for a new storage miner contract?
-
-Yes, the repair miner would charge a premium on the underlying storage, assuming some failure rate, and would be responsible for the extra costs if they chose unreliable storage miners to ultimately store the data.
-
-We descoped the repair miner work for mainnet launch as the network is complicated enough without it, and it's relatively straightforward as an upgrade later.
 
 ### Does Filecoin reward network or main network line machine need a fixed IP?
 
@@ -125,31 +116,23 @@ SDR is confirmed for mainnet launch, and we have no evidence of malicious constr
 
 If you have any information about any potential security problem or malicious construction, reach out to our team at security@filecoin.org.
 
-### How likely is the NSE algorithm to come on line later? Is AMD's configuration the most consistent with the current SDR algorithm?
+### How likely is it that the Filecoin protocol will switch to the NSE Proof-of-Replication construction later?
 
 About NSE: NSE is one of the best candidates for a proof upgrade, and teams are working on implementation. But there are other candidates too, which are promising as well. It may be that another algorithm ends up better than NSE -- we don’t know yet. Proof upgrades will arrive after mainnet launch and will coexist.
 
-Yes, AMD may be optimal for SDR, [see this for why](https://github.com/filecoin-project/lotus/blob/master/documentation/en/sealing-procs.md)
+AMD may be optimal hardware for SDR. You can [see this description](https://github.com/filecoin-project/lotus/blob/master/documentation/en/sealing-procs.md) for more information on why.
 
 ### How are you working to bootstrap the demand side of the marketplace? The Discover program is nice but who is the target market for users and how do you get them?
 
-In addition to Filecoin Discover, a number of groups are actively building tools and services to support adoption of the Filecoin network with developers and clients. For example, check out the recordings from our [Virtual Community Meetup](https://filecoin.io/blog/filecoin-virtual-community-meetup-recap/) to see updates about Textile Powergate and Starling Storage.
+In addition to Filecoin Discover, a number of groups are actively building tools and services to support adoption of the Filecoin network with developers and clients. For example, check out the recordings from our [Virtual Community Meetup](https://filecoin.io/blog/filecoin-virtual-community-meetup-recap/) to see updates about Textile Powergate and Starling Storage. You can also read more about some of the teams building on Filecoin through HackFS in our [HackFS Week 1 Recap](https://filecoin.io/blog/hackfs-teams-vol-1/).
 
-A number of other programs, like Filecoin Ignite, will also contribute additional demand, tooling, and usage.
+### Does Filecoin have an implementation of client and miner order matching through order books?
 
-### Why not implement the scheme that the white paper says "miners and clients automatically match orders through order books"？Is it because the LIMITS of TPS?
-
-There will be off-chain orderbooks and miner marketplaces -- some are in development now from some teams. They will work mostly off-chain, because TPS on chain is not enough for the volume of usage we expect on Filecoin. These orderbooks build on the basic deal-flow on chain. These orderbooks will arrive in their own development trajectory -- most likely around or soon after mainnet launch.
+There will be off-chain orderbooks and miner marketplaces -- some are in development now from some teams. They will work mostly off-chain, because transactions per second on chain is not enough for the volume of usage we expect on Filecoin. These orderbooks build on the basic deal-flow on chain. These orderbooks will arrive in their own development trajectory -- most likely around or soon after mainnet launch.
 
 ### Why does Filecoin mining work best on AMD?
 
-Currently, Filecoin's Proof of Replication (PoRep) prefers to be run on AMD processors. More accurately, it runs much much slower on Intel CPUs (it runs competitively fast on some ARM processors, like the ones in newer Samsung phones, but they lack the RAM to seal the larger sector sizes). The main reason that we see this benefit on AMD processors is due to their implementation of the SHA hardware instructions. Now, why do we use the SHA instruction?
-
-### The Filecoin Client is not usable enough, so how will I give a deal to customers when mainnet launches？
-
-Improving the UX and fixing bugs is our only priority right now. We’re excited to be fixing all the issues the community is reporting, so please keep complaining (file issues on Github, and post in #fil-lotus on Slack).
-
-Clients
+Currently, Filecoin's Proof of Replication (PoRep) prefers to be run on AMD processors. See this description of Filecoin sealing for more information. More accurately, it runs much much slower on Intel CPUs. It runs competitively fast on some ARM processors, like the ones in newer Samsung phones, but they lack the RAM to seal the larger sector sizes. The main reason that we see this benefit on AMD processors is due to their implementation of the SHA hardware instructions.
 
 ### What are the changes to the algorithm and logic layer of lotus and go-filecoin before going online?
 
@@ -159,13 +142,11 @@ There will be no changes to algorithm and logic before we go live -- from here o
 
 During the competition, once your miner has > 0 storage power, many bots will begin attempting storage and retrieval deals with your miner. The competition dashboard will display your deal success rate in near-real time. Miners below a certain high threshold will be ineligible to receive rewards.
 
-We plan to run the bots for one to two weeks before the competition to give miners a chance to test their configuration, and will announce when that begins.
-
 ### What do miners have to do to change a committed capacity (CC) sector into a "real-data" sector?
 
 We are reusing much of the existing code path for this first iteration. Miners will publish storage deals that they will upgrade the CC sector with, announce to the chain that they are doing an upgrade, and prove to the chain that a new sector has been sealed correctly. We expect to evolve and make this cheaper and more attractive over time after mainnet.
 
-### For the incentive phase, you said a miner has to execute the full sector life cycle and terminate the sectors. What does “terminating” the sectors mean?
+### For the incentive phase, a miner has to execute the full sector life cycle and terminate the sectors. What does “terminating” the sectors mean?
 
 When a committed capacity sector is added to the chain, it can upgrade to a sector with deals, extend its lifetime, or terminate through either faults or voluntary actions. While we don’t expect this to happen very often on mainnet, a miner may deem it rational to terminate their promise to the network and their clients but accept a penalty for doing so. We want miners to execute the full sector lifecycle to get a flavor of providing long-term and useful storage on Filecoin.
 
@@ -181,7 +162,7 @@ The minimum duration for a deal is set in the miner’s ask. There’s also a pr
 
 Automatic repair of faulted data is a feature we've pushed off until after mainnet launch. For now, the way to ensure resiliency is to store your data with multiple miners, to gain some level of redundancy. If you want to learn more about how we are thinking about repair in the future, [here are some notes](https://github.com/filecoin-project/specs/pull/245/files).
 
-### How do I know that whatever miner "takes the burden" would not immediately start asking me ridiculously high prices for retrieval?
+### How do I know that my storage miner will not charge prohibitively high costs for data retrieval?
 
 To avoid extortion, always ensure you store your data with a fairly decentralized set of miners (and note: it's pretty difficult for a miner to be sure they are the only person storing a particular piece of data, especially if you encrypt the data).
 
@@ -195,22 +176,16 @@ We have some really good ideas around 'warm' storage (that is mutable, and prova
 
 There’s a pretty large design space here, and we can do a bunch of different things depending on the levels of trust involved, the price sensitivity, and the frequency of updates clients desire.
 
-### What are the standards and conditions of the verifier, is there a selected institution to verify, can you tell us about this situation?
+### Who will be selected to be verifiers to verify clients on the network?
 
-There will be several different institutions. We don’t have more updates about Verfiers at this time. We will have more around mid July.
+We don’t have more updates about verifiers at this time. We will post on our blog once we do.
 
-### Will the existence of the Filecoin pool lead to the deviation of centralized storage from the vision of distributed storage?
+### Will the existence of Filecoin mining pools lead to centralized storage and away from the vision of distributed storage?
 
 No – Filecoin creates a decentralized storage network in part by massively decreasing the barrier to entry to becoming a storage provider. Even if there were some large pools, anyone can join the network and provide storage with just a modest hardware purchase, and we expect clients to store their files with many diverse miners.
 
 Also, note that world location matters for mining: many clients will prefer miners in specific regions of the world, so this enables lots of miners to succeed across the world, where there is storage demand.
 
-### How can someone get an audit on global/market-wide pricing quickly enough to make a decision if nearby nodes could "crowd out" smaller and less-reachable nodes with higher prices?
+### Even though Filecoin will be backed up to our normal IPFS pinning layer, we still need to know how quickly we can access data from the Filecoin network. How fast will retrieval be from the Filecoin network?
 
-Miner pricing is communicated via signed 'storage asks'. Currently, the software just queries a miner directly for their asks, but that's not necessary. An aggregator service can query asks from a large number of miners, and present those quickly to clients, so clients can ask an aggregator for the best set of miners. Since the asks are signed, and have temporal validity information baked in, clients can trust asks received from anyone.
-
-### Even though Filecoin will be backed up to our normal pinning layer, we still need to know how quickly we can access data from the Filecoin network. How fast will retrieval be?
-
-Our latest tests show that a sector that holds data takes ~1 hour to unseal. 1-5 hours is our best real world estimate.
-
-We are also building a feature that will be available by launch to help with this. When proposing a deal to a storage miner, you can set a flag indicating that you want an extra, unsealed copy of your data to store, making retrieval faster.
+If you are retrieving your data from IPFS or a remote pinning layer such as an [FPS](https://github.com/filecoin-project/filecoin-docs/build/core-products/filecoin-backed-pinning-services/), retrieval should take on the order of milliseconds to seconds in the worst case. Our latest tests for retrieval from the Filecoin network directly show that a sealed sector holding data takes ~1 hour to unseal. 1-5 hours is our best real world estimate to go from sector unsealing to ultimate delivery of the data. If you need faster data retrieval for your application, we recommend building on Powergate or an FPS.
